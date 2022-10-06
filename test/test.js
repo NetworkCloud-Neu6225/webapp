@@ -8,7 +8,7 @@ chai.use(chaiHttp);
 
 
 describe("Unit test for GET method for Healthz", () => {
-    it("It should return response code 200", (done) => {
+   it("It should return response code 200", (done) => {
         chai.request(server)
         .get('/healthz')
         .end((err, res) => {
@@ -17,6 +17,6 @@ describe("Unit test for GET method for Healthz", () => {
             expect(message).to.be.equal('Healthy!');
             done();
         })
-    });
+    })
 });
 
